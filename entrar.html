@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Records - Entrar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="entrar-page">
+    <div class="site-announcement">
+        <span>DISCOS DE VINIL &middot; MÚSICA E CULTURA</span>
+        <a href="catalogo.html">EXPLORE A COLEÇÃO <span aria-hidden="true">&#8594;</span></a>
+    </div>
+    <header class="site-header">
+        <div class="logo">
+            <h1>Records</h1>
+        </div>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="carrinho.html">Carrinho</a>
+            <a href="ajuda.html">Ajuda</a>
+            <a href="entrar.html" class="link-entrar active"><span class="icone-perfil-nav" aria-hidden="true"></span>Entrar</a>
+        </nav>
+    </header>
+
+    <main class="entrar-main">
+        <section class="entrar-formulario" aria-labelledby="entrar-titulo">
+            <p class="entrar-kicker">ÁREA DO CLIENTE</p>
+            <div id="modo-login" class="entrar-modo">
+                <h2 id="entrar-titulo">Acesse sua conta</h2>
+                <p class="entrar-descricao">Entre com seus dados para continuar.</p>
+                <form onsubmit="realizarLogin(event)">
+                    <div class="campo-form">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="seu@email.com" autocomplete="email" required>
+                    </div>
+                    <div class="campo-form">
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" name="senha" placeholder="Sua senha" autocomplete="current-password" required>
+                    </div>
+                    <p id="login-erro" class="cadastro-erro" role="alert" hidden></p>
+                    <button type="submit" class="entrar-submit">Entrar</button>
+                </form>
+                <p class="entrar-alternar">Ainda não tem conta? <button type="button" onclick="mostrarCadastro()">Cadastre-se</button></p>
+                <p class="entrar-ajuda">Precisa de ajuda? <a href="ajuda.html">Consulte as dúvidas frequentes</a></p>
+            </div>
+
+            <div id="modo-cadastro" class="entrar-modo" hidden>
+                <h2 id="cadastro-titulo">Crie sua conta</h2>
+                <p class="entrar-descricao">Preencha seus dados para fazer parte da Records.</p>
+                <form id="form-cadastro" onsubmit="cadastrarUsuario(event)">
+                    <div class="campo-form">
+                        <label for="cadastro-nome">Nome</label>
+                        <input type="text" id="cadastro-nome" name="nome" placeholder="Seu nome" autocomplete="name" required>
+                    </div>
+                    <div class="campo-form">
+                        <label for="cadastro-email">E-mail</label>
+                        <input type="email" id="cadastro-email" name="email" placeholder="seu@email.com" autocomplete="email" required>
+                    </div>
+                    <div class="campo-form">
+                        <label for="cadastro-senha">Senha</label>
+                        <input type="password" id="cadastro-senha" name="senha" placeholder="Mínimo de 8 caracteres" autocomplete="new-password" minlength="8" required>
+                    </div>
+                    <div class="campo-form">
+                        <label for="cadastro-confirmacao">Confirme a senha</label>
+                        <input type="password" id="cadastro-confirmacao" name="confirmacao" placeholder="Repita sua senha" autocomplete="new-password" minlength="8" required>
+                    </div>
+                    <p id="cadastro-erro" class="cadastro-erro" role="alert" hidden></p>
+                    <button type="submit" class="entrar-submit">Criar conta</button>
+                </form>
+                <p class="entrar-alternar">Já tem conta? <button type="button" onclick="mostrarLogin()">Entrar</button></p>
+                <p class="entrar-ajuda">Precisa de ajuda? <a href="ajuda.html">Consulte as dúvidas frequentes</a></p>
+            </div>
+        </section>
+
+        <section id="perfil-usuario" class="entrar-perfil" aria-labelledby="perfil-titulo" hidden>
+            <p class="entrar-kicker">PERFIL DO CLIENTE</p>
+            <div id="perfil-avatar" class="perfil-avatar" aria-hidden="true"></div>
+            <h2 id="perfil-titulo">Olá, <span id="perfil-nome"></span></h2>
+            <p class="entrar-descricao">Sua sessão está ativa com este e-mail:</p>
+            <p id="perfil-email" class="perfil-email"></p>
+            <div class="perfil-acoes">
+                <a class="perfil-catalogo" href="catalogo.html">Explorar catálogo</a>
+                <a class="perfil-carrinho" href="carrinho.html">Ver meu carrinho</a>
+                <button class="perfil-sair" type="button" onclick="encerrarSessao()">Sair da conta</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer-content">
+            <div class="site-footer-brand-block">
+                <a class="site-footer-brand" href="index.html">Records.</a>
+                <p class="site-footer-tagline">Música para tocar, guardar<br>e passar adiante.</p>
+            </div>
+            <nav class="site-footer-links" aria-label="Links do rodapé">
+                <div>
+                    <h2>Explore</h2>
+                    <a href="catalogo.html">Catálogo completo</a>
+                    <a href="catalogo.html#mpb-e-samba">MPB e Samba</a>
+                    <a href="catalogo.html#rock">Rock</a>
+                    <a href="catalogo.html#hip-hop">Hip-Hop</a>
+                </div>
+                <div>
+                    <h2>Records</h2>
+                    <a href="carrinho.html">Seu carrinho</a>
+                    <a href="entrar.html">Área do cliente</a>
+                    <a href="ajuda.html">Ajuda e dúvidas</a>
+                </div>
+            </nav>
+        </div>
+        <div class="site-footer-bottom">
+            <p>&copy; 2026 RECORDS. TODOS OS DIREITOS RESERVADOS.</p>
+            <p>FEITO PARA OUVIR DOS DOIS LADOS</p>
+        </div>
+        <p class="site-footer-wordmark" aria-hidden="true">Records.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Records - Carrinho</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="carrinho-page">
+    <div class="site-announcement">
+        <span>DISCOS DE VINIL &middot; MÚSICA E CULTURA</span>
+        <a href="catalogo.html">EXPLORE A COLEÇÃO <span aria-hidden="true">&#8594;</span></a>
+    </div>
+    <header class="site-header">
+        <div class="logo">
+            <h1>Records</h1>
+        </div>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="carrinho.html" class="active">Carrinho</a>
+            <a href="ajuda.html">Ajuda</a>
+            <a href="entrar.html" class="link-entrar"><span class="icone-perfil-nav" aria-hidden="true"></span>Entrar</a>
+        </nav>
+    </header>
+
+    <main class="carrinho-main">
+        <section class="carrinho-intro" aria-labelledby="carrinho-titulo">
+            <p class="carrinho-kicker">SUA SELEÇÃO</p>
+            <h2 id="carrinho-titulo">Seu carrinho</h2>
+            <p>Revise seus discos antes de concluir o pedido.</p>
+        </section>
+
+        <div class="carrinho-layout">
+            <section class="carrinho-itens-section" aria-labelledby="carrinho-itens-titulo">
+                <div class="carrinho-lista-header">
+                    <h3 id="carrinho-itens-titulo">Discos selecionados</h3>
+                    <span id="carrinho-contagem">0 discos</span>
+                </div>
+                <div id="carrinho-itens" class="carrinho-lista" aria-live="polite"></div>
+                <a class="carrinho-continuar" href="catalogo.html">&#8592; Continuar comprando</a>
+            </section>
+
+            <aside class="carrinho-resumo" aria-labelledby="resumo-titulo">
+                <h3 id="resumo-titulo">Resumo do pedido</h3>
+                <div class="linha-resumo">
+                    <span>Subtotal</span>
+                    <span id="subtotal">R$ 0,00</span>
+                </div>
+                <div class="linha-resumo">
+                    <span>Frete</span>
+                    <span id="frete">R$ 0,00</span>
+                </div>
+                <div class="linha-resumo total">
+                    <span>Total</span>
+                    <span id="valor-total">R$ 0,00</span>
+                </div>
+                <div class="carrinho-acoes">
+                    <button id="btn-finalizar" class="btn-comprar" type="button" onclick="finalizarCompra()" disabled>Finalizar compra</button>
+                    <button id="btn-limpar-carrinho" class="btn-secundario" type="button" onclick="limparCarrinho()" disabled>Esvaziar carrinho</button>
+                </div>
+                <p class="carrinho-aviso">O frete é aplicado quando há discos no pedido.</p>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer-content">
+            <div class="site-footer-brand-block">
+                <a class="site-footer-brand" href="index.html">Records.</a>
+                <p class="site-footer-tagline">Música para tocar, guardar<br>e passar adiante.</p>
+            </div>
+            <nav class="site-footer-links" aria-label="Links do rodapé">
+                <div>
+                    <h2>Explore</h2>
+                    <a href="catalogo.html">Catálogo completo</a>
+                    <a href="catalogo.html#mpb-e-samba">MPB e Samba</a>
+                    <a href="catalogo.html#rock">Rock</a>
+                    <a href="catalogo.html#hip-hop">Hip-Hop</a>
+                </div>
+                <div>
+                    <h2>Records</h2>
+                    <a href="carrinho.html">Seu carrinho</a>
+                    <a href="entrar.html">Área do cliente</a>
+                    <a href="ajuda.html">Ajuda e dúvidas</a>
+                </div>
+            </nav>
+        </div>
+        <div class="site-footer-bottom">
+            <p>&copy; 2026 RECORDS. TODOS OS DIREITOS RESERVADOS.</p>
+            <p>FEITO PARA OUVIR DOS DOIS LADOS</p>
+        </div>
+        <p class="site-footer-wordmark" aria-hidden="true">Records.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
